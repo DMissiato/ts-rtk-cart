@@ -1,4 +1,6 @@
+
 import React from 'react';
+import axios from 'axios';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
@@ -16,6 +18,11 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+axios.defaults.headers.common['accept-language'] = 'it';
+axios.defaults.headers.common['content-type'] = 'application/json';
+axios.defaults.headers.common['x-musement-currency'] = 'EUR';
+axios.defaults.headers.common['x-musement-version'] = '3.4.0';
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
