@@ -1,17 +1,7 @@
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-
-interface Wish
-{
-  uuid: string,
-  title: string
-}
-
-interface WishListState 
-{
-  wishes: Wish[]
-}
+import { Wish, WishListState } from '../../types/ecommerce';
 
 const initialState: WishListState = {
   wishes: []

@@ -1,0 +1,72 @@
+
+.wrapper
+{
+  margin: 0 50px 100px;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 15px;
+
+  &.wishList
+  {
+    border: 2px solid #f00;
+  }
+
+  ul
+  {
+    list-style: none;
+    padding: 0;
+
+    li
+    {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+
+      .cartOptions
+      {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        .btn
+        {
+          width: 30px;
+          height: 30px;
+          border: 2px solid #000;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 5px;
+          cursor: pointer;
+
+          &:hover
+          {
+            background-color: #000;
+            color: #fff;
+          }
+
+          &.x
+          {
+            font-size: 1.4rem;
+
+            &:hover
+            {
+              border: 2px solid #f00;
+              color: #f00;
+              background-color: #fff;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}

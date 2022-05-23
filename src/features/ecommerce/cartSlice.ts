@@ -1,20 +1,7 @@
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
-
-export interface Activity
-{
-  uuid: string,
-  title: string,
-  cover_image_url: string,
-  retail_price: any,
-  quantity: number
-}
-
-interface CartState 
-{
-  activities: Activity[]
-}
+import { Activity, CartState } from '../../types/ecommerce';
 
 const initialState: CartState = {
   activities: []
