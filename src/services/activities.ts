@@ -8,7 +8,7 @@ export const musementApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://sandbox.musement.com/api/v3' }),
   endpoints: (builder) => ({
     getActivities: builder.query<{data: Array<Activity>}, number>({
-      query: (limit) => `activities?limit=${limit}&offset=0`,
+      query: (limit) => `activities?limit=${limit}&offset=0&default_price_range=0.01,100`,
     }),
     getActivityByName: builder.query<{data: Array<Activity>}, string>({
       query: (name) => `activities?text=${name}`,
