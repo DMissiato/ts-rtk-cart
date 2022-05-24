@@ -4,21 +4,23 @@ import { Activity } from '../../types/ecommerce';
 import styles from './ActivityCard.module.scss';
 
 
-type Props =
+export type Props =
 {
     value: Activity
     addToCart?: () => void,
-    addToWishList?: WishListAddable
+    addToWishList?: WishListAddable,
+    large?: boolean
 }
 
 const ActivityCard = ({
     value,
     addToCart,
-    addToWishList
+    addToWishList,
+    large
 }: Props): JSX.Element =>
 {   
     return (
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper} ${large ? styles.large : ''}`}>
             <div className={styles.img} style={{ backgroundImage: `url(${value.cover_image_url})`}}></div>
                   <h4>{value.title}</h4>
                   <div className={styles.details}>
